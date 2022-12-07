@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Displaying Times and Dates</title>
+    </head>
+
+    <body>
+        <h1>Current Date and Time<br>
+            <script>
+               now = new Date();
+                localtime = now.toString();
+                utctime = now.toGMTString();
+                document.write("Local time: " + localtime + "<br>");
+                document.write("UTC time: " + utctime + "<br>");
+
+                var month = now.getMonth() + 1;
+                var day = now.getDate();
+                var year = now.getFullYear();
+                document.write(month + "/" + day + "/" + year + "<br>");
+                
+                hour = now.getHours();
+                minute = now.getMinutes();
+                second = now.getSeconds();
+                miliseconds = now.getMilliseconds();
+                document.write("Time: " + hour + ":" + minute + ":" + second + "<br>");
+                document.write("Time: " + hour + ":" + minute + ":" + ("0" + second).slice(-2) + ":" + miliseconds + "<br>");
+            </script>
+        </h1>
+    </body>
+
+</html>
